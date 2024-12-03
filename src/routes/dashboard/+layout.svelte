@@ -11,7 +11,7 @@
 
 <div class="flex">
 	<Sidebar {currentPage}/>
-	<main class="flex-1">
+	<main class="flex-1 ml-56">
 		<slot />
 	</main>
 </div>

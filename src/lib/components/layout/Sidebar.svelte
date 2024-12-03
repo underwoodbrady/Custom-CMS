@@ -66,7 +66,7 @@
 	const user = 'User'; //TODO: Fill in
 </script>
 
-<aside class="h-screen w-56 bg-sagedark-3 pt-xl flex flex-col justify-between">
+<aside class="fixed left-0 top-0 h-screen w-56 bg-sagedark-3 pt-xl flex flex-col justify-between">
 	<div>
 		<h1 class="px-lg text-xl font-semibold mb-lg">Title</h1>
 		<ul class="text-sm space-y-sm text-sagedark-11">
