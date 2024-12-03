@@ -3,7 +3,6 @@
     
 
 </script>
-<Dashboard title="Branding" onDiscard={()=>{}} onSave={()=>{}}>
-    <h2></h2>
+<Dashboard title="SEO">
 
 </Dashboard>
