@@ -1,3 +1,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+body{
+    background-color: theme('colors.sagedark.2');
+    color: theme('colors.sagedark.12');
+    font-family: "DM Sans";
+	overflow-x: hidden;
+}
