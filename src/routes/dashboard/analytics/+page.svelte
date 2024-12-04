@@ -24,6 +24,6 @@
 </script>
 
 <Dashboard title="Analytics">
-	<p class="mb-md">Performance</p>
+	<p class="mb-md font-medium">Performance</p>
 	<canvas use:chartRender={data1} class="relative z-10"> </canvas>
 </Dashboard>

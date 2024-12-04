@@ -4,5 +4,6 @@
 
 </script>
 <Dashboard title="Blog">
+	<p class="mb-md font-medium">Coming Soon...</p>
 
 </Dashboard>
