@@ -14,7 +14,7 @@
 
 <section class="py-2xl px-xl">
 	<div class="flex items-center w-full justify-between mb-xl">
-		<h1 class="text-2xl font-medium">{title}</h1>
+		<h1 class="text-2xl font-semibold">{title}</h1>
 		<div
 			class="relative text-sagedark-11 hover:text-sagedark-12 flex items-center text-sm space-x-xs group duration-100 transition-colors"
 		>

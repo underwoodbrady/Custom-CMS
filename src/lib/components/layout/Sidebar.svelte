@@ -69,7 +69,7 @@
 <aside class="fixed left-0 top-0 h-screen w-56 bg-sagedark-3 pt-xl flex flex-col justify-between">
 	<div>
 		<h1 class="px-lg text-xl font-semibold mb-lg">Title</h1>
-		<ul class="text-sm space-y-sm text-sagedark-11">
+		<ul class="text-sm space-y-sm text-sagedark-11 font-medium">
 			{#each pages as page}
 				{#if page.isDivider}
 					<li class="my-2 border-t border-sagedark-7"></li>
