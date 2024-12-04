@@ -4,5 +4,5 @@
 
 </script>
 <Dashboard title="Analytics">
-
+	<p>Performance</p>
 </Dashboard>

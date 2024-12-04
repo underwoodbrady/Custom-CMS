@@ -63,7 +63,7 @@
 		}
 	];
 
-	const user = 'User'; //TODO: Fill in
+	const user = 'Rachel'; //TODO: Fill in
 
 	let activeItemHeight = 0;
 	let activeItemTop = 0;
@@ -93,7 +93,7 @@
 		></div>
 	{/if}
 	<div>
-		<h1 class="px-lg text-xl font-semibold mb-lg">Title</h1>
+		<h1 class="px-lg text-xl font-semibold mb-lg">Spruce</h1>
 		<ul class="text-sm space-y-sm text-sagedark-11 font-medium">
 			{#each pages as page}
 				{#if page.isDivider}
