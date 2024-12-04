@@ -23,7 +23,7 @@
 			<div
 				class="absolute top-full left-0 hidden group-hover:block bg-sagedark-4 text-sagedark-11 rounded-md p-sm text-xs"
 			>
-				Any Changes Made Will Reviewed Within 12 Hours
+				Any Changes Made Will Be Reviewed Within 12 Hours
 			</div>
 		</div>
 	</div>

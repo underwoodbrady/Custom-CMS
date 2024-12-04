@@ -39,6 +39,7 @@
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
 		"@tailwindcss/typography": "^0.5.15",
+		"chart.js": "^4.4.7",
 		"drizzle-orm": "^0.33.0",
 		"postgres": "^3.4.4"
 	}

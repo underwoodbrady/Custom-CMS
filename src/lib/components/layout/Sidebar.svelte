@@ -31,7 +31,7 @@
 			icon: IconAnalytics
 		},
 		{
-			page: 'SEO',
+			page: 'SEO & Performance',
 			route: '/dashboard/seo',
 			icon: IconSEO
 		},

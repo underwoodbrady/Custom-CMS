@@ -31,19 +31,19 @@
 	<div class="flex items-center space-x-md mb-lg">
 		<div>
 			<h3 class="text-sagedark-11 mb-sm text-sm">Primary</h3>
-			<div class="relative rounded-md w-9 h-9 bg-[#f7d7] border border-sagedark-7">
+			<button class="relative rounded-md w-9 h-9 bg-[#f7d7] border border-sagedark-7">
 				<IconEdit
 					class="absolute -bottom-2 -right-2 text-sm bg-teal-9 hover:bg-teal-10 active:bg-teal-11 transition-colors duration-100 rounded-full p-xs text-sagedark-1"
 				/>
-			</div>
+			</button>
 		</div>
 		<div>
 			<h3 class="text-sagedark-11 mb-sm text-sm">Accent</h3>
-			<div class="relative rounded-md w-9 h-9 bg-[#d8d8] border border-sagedark-7">
+			<button class="relative rounded-md w-9 h-9 bg-[#d8d8] border border-sagedark-7">
 				<IconEdit
 					class="absolute -bottom-2 -right-2 text-sm bg-teal-9 hover:bg-teal-10 active:bg-teal-11 transition-colors duration-100 rounded-full p-xs text-sagedark-1"
 				/>
-			</div>
+			</button>
 		</div>
 		<div>
 			<h3 class="text-sagedark-11 mb-sm text-sm">Black</h3>
