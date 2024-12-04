@@ -31,7 +31,7 @@
 </script>
 
 <div
-	class="fixed left-56 top-0 h-screen w-52 bg-sagedark-5 pt-xl flex flex-col px-lg overflow-y-auto"
+	class="fixed left-56 top-0 h-screen w-52 bg-sagedark-5 py-xl flex flex-col px-lg overflow-y-auto"
 >
 	<h3 class=" text-lg font-medium mb-xs">Pages</h3>
 	<h4 class="text-sagedark-11 mb-lg text-sm">Select one to edit</h4>
@@ -40,14 +40,14 @@
 	{#each pages as page}
 		<a href={page.route}>
 			<div
-				class="relative w-full h-24 bg-sagedark-4 rounded-md border border-sagedark-7 mb-sm overflow-hidden"
+				class="relative w-full h-24 bg-sagedark-4 rounded-md border border-sagedark-7 mb-sm overflow-hidden group"
 			>
 				<img src={page.image} alt="Page SS" class="w-full h-full object-cover" />
                 {#if currentPage != page.route}
-                    <div class="absolute left-0 top-0 w-full h-full bg-black/40"></div>
+                    <div class="absolute left-0 top-0 w-full h-full bg-black/40 group-hover:bg-black/20 transition-colors duration-100"></div>
                 {/if}
 			</div>
-			<p class="{currentPage == page.route ? "text-sagedark-12" : "text-sagedark-11"} text-sm font-medium">{page.page}</p>
+			<p class="{currentPage == page.route ? "text-sagedark-12" : "text-sagedark-11"} text-sm font-medium group-hover:text-sagedark-12 transition-colors duration-100">{page.page}</p>
 		</a>
 	{/each}
     </div>
