@@ -1,6 +1,8 @@
 <script>
 	import Dashboard from '$lib/components/layout/Dashboard.svelte';
 	import IconCheck from '~icons/mdi/check-circle';
+	import IconLighthouse from '~icons/mdi/lighthouse-on';
+	import IconArrow from '~icons/mdi/arrow-right-thin';
 	import IconInfo from '~icons/mdi/info';
 	import ScoreDoughnut from '$lib/components/SEO/ScoreDoughnut.svelte';
 	import MetricCard from '$lib/components/SEO/MetricCard.svelte';
@@ -49,7 +51,7 @@
 	};
 </script>
 
-<Dashboard title="SEO" subtitle="Last Updated 12/4/2024" showSafeEditMode={false}>
+<Dashboard title="SEO & Performance" subtitle="Last Updated 12/4/2024" showSafeEditMode={false}>
 	<div class="flex justify-between">
 		<div>
 			<p class="mb-md font-medium">Summary</p>
@@ -60,7 +62,7 @@
 				<ScoreDoughnut label="SEO" score="95" data={data2}/>
 			</div>
 			<p class="mb-md font-medium">Metrics</p>
-			<div class="max-w-[500px] grid gap-md grid-cols-2">
+			<div class="max-w-[500px] grid gap-md grid-cols-2 mb-lg">
 				<MetricCard title="First Contentful Paint" time="0.7 s">
 					<p>
 						<span class="font-semibold text-sagedark-12">First contentful paint</span> is the time it takes
@@ -85,6 +87,14 @@
 					</p>
 				</MetricCard>
 			</div>
+			<a href="https://pagespeed.web.dev/" target="_blank" class="text-sagedark-11 bg-sagedark-5 hover:bg-sagedark-6 active:bg-sagedark-7 transition-colors duration-100 rounded-md py-sm px-md w-full text-sm flex items-center justify-between" >
+				<div class="flex items-center space-x-sm">
+					<IconLighthouse/>
+					<p>Data Captured With Google Lighthouse</p>
+				</div>
+			
+				<IconArrow class="text-lg"/>
+			</a>
 		</div>
 		<div class="sticky right-xl top-4xl">
 			<h3 class="font-medium mb-md">SEO Checklist</h3>

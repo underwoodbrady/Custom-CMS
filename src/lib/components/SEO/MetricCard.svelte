@@ -8,7 +8,7 @@
 <div class="relative flex space-x-sm bg-sagedark-3 p-md rounded-md">
 	<div class="w-3 h-3 rounded-full bg-tealdark-9 mt-xs"></div>
 	<div>
-		<p class="mb-sm">{title}</p>
+		<h4 class="mb-sm">{title}</h4>
 		<p class="text-2xl text-tealdark-9 font-medium">{time}</p>
 	</div>
 	<div class="absolute right-sm bottom-sm group">
