@@ -1,6 +1,9 @@
 <script>
 	import Dashboard from '$lib/components/layout/Dashboard.svelte';
-	import { chartRender } from '$lib/actions/chartRenderer';
+	import IconCheck from '~icons/mdi/check-circle';
+	import IconInfo from '~icons/mdi/info';
+	import ScoreDoughnut from '$lib/components/SEO/ScoreDoughnut.svelte';
+	import MetricCard from '$lib/components/SEO/MetricCard.svelte';
 
 	let data1 = {
 		type: 'doughnut',
@@ -46,85 +49,67 @@
 	};
 </script>
 
-<Dashboard title="SEO">
-	<p class="mb-md font-medium">Summary</p>
-
-	<div class="flex items-center space-x-md mb-lg">
-		<div class="flex flex-col items-center">
-			<div class="relative w-16 h-16 mb-sm">
-				<div
-					class="absolute left-0 top-0 w-[calc(100%-14px)] h-[calc(100%-14px)] bg-tealdark-5 rounded-full mt-[10px] ml-[8px] text-tealdark-12 flex items-center justify-center font-medium text-xl"
-				>
-					<p class="mt-xs">100</p>
+<Dashboard title="SEO" subtitle="Last Updated 12/4/2024" showSafeEditMode={false}>
+	<div class="flex justify-between">
+		<div>
+			<p class="mb-md font-medium">Summary</p>
+			<div class="flex items-center space-x-md mb-lg">
+				<ScoreDoughnut label="Performance" score="100" data={data1}/>
+				<ScoreDoughnut label="Accessibility" score="95" data={data2}/>
+				<ScoreDoughnut label="Best Practices" score="82" data={data3}/>
+				<ScoreDoughnut label="SEO" score="95" data={data2}/>
+			</div>
+			<p class="mb-md font-medium">Metrics</p>
+			<div class="max-w-[500px] grid gap-md grid-cols-2">
+				<MetricCard title="First Contentful Paint" time="0.7 s">
+					<p>
+						<span class="font-semibold text-sagedark-12">First contentful paint</span> is the time it takes
+						for the first piece of content to render on the page.
+					</p>
+				</MetricCard>
+				<MetricCard title="Largest Contentful Paint" time="3.1 s">
+					<p>
+						<span class="font-semibold text-sagedark-12">Largest contentful paint</span> is the time it takes for the largest visible element to load on the page.
+					</p>
+				</MetricCard>
+				<MetricCard title="Total Blocking Time" time="0 ms">
+					<p>
+						<span class="font-semibold text-sagedark-12">Total blocking time</span> is the duration
+						between First Contentful Paint and Time to Interactive when the main thread is blocked.
+					</p>
+				</MetricCard>
+				<MetricCard title="Speed Index" time="0.7s">
+					<p>
+						<span class="font-semibold text-sagedark-12">Speed index</span> is a measure of how quickly
+						the content of a page is visually displayed
+					</p>
+				</MetricCard>
+			</div>
+		</div>
+		<div class="sticky right-xl top-4xl">
+			<h3 class="font-medium mb-md">SEO Checklist</h3>
+			<div class="flex flex-col space-y-md">
+				<div class="flex items-center space-x-sm text-sm">
+					<div class="w-6 h-6 rounded-full bg-sagedark-4 flex items-center justify-center  font-medium">1.</div>
+					<a class="text-sagedark-11 hover:text-sagedark-12 hover:underline" href="/dashboard/seo">Optimize performance</a>
+					<IconCheck class="text-teal-9 w-5 h-5"/>
 				</div>
-				<canvas use:chartRender={data1} class="relative z-10"> </canvas>
-			</div>
-			<p class="text-xs text-sagedark-11">Performance</p>
-		</div>
-		<div class="flex flex-col items-center">
-			<div class="relative w-16 h-16 mb-sm">
-				<div
-					class="absolute left-0 top-0 w-[calc(100%-14px)] h-[calc(100%-14px)] bg-tealdark-5 rounded-full mt-[10px] ml-[8px] text-tealdark-12 flex items-center justify-center font-medium text-xl"
-				>
-					<p class="mt-xs">95</p>
+				<div class="flex items-center space-x-sm text-sm">
+					<div class="w-6 h-6 rounded-full bg-sagedark-4 flex items-center justify-center  font-medium">2.</div>
+					<a class="text-sagedark-11 hover:text-sagedark-12 hover:underline transition-colors duration-100" href="/dashboard/branding">Clear & Descriptive Branding</a>
+					<IconCheck class="text-teal-9 w-5 h-5"/>
 				</div>
-				<canvas use:chartRender={data2} class="relative z-10"> </canvas>
-			</div>
-			<p class="text-xs text-sagedark-11">Accessibility</p>
-		</div>
-		<div class="flex flex-col items-center">
-			<div class="relative w-16 h-16 mb-sm">
-				<div
-					class="absolute left-0 top-0 w-[calc(100%-14px)] h-[calc(100%-14px)] bg-tealdark-5 rounded-full mt-[10px] ml-[8px] text-tealdark-12 flex items-center justify-center font-medium text-xl"
-				>
-					<p class="mt-xs">82</p>
+				<div class="flex items-center space-x-sm text-sm">
+					<div class="w-6 h-6 rounded-full bg-sagedark-4 flex items-center justify-center  font-medium">3.</div>
+					<a class="text-sagedark-11 hover:text-sagedark-12 hover:underline transition-colors duration-100" href="/dashboard/sitecontent">Quality Content</a>
+					<IconCheck class="text-teal-9 w-5 h-5"/>
 				</div>
-				<canvas use:chartRender={data3} class="relative z-10"> </canvas>
-			</div>
-			<p class="text-xs text-sagedark-11">Best Practices</p>
-		</div>
-		<div class="flex flex-col items-center">
-			<div class="relative w-16 h-16 mb-sm">
-				<div
-					class="absolute left-0 top-0 w-[calc(100%-14px)] h-[calc(100%-14px)] bg-tealdark-5 rounded-full mt-[10px] ml-[8px] text-tealdark-12 flex items-center justify-center font-medium text-xl"
-				>
-					<p class="mt-xs">82</p>
+				<div class="flex items-center space-x-sm text-sm">
+					<div class="w-6 h-6 rounded-full bg-sagedark-4 flex items-center justify-center  font-medium">4.</div>
+					<a class="text-sagedark-11 hover:text-sagedark-12 hover:underline transition-colors duration-100" href="https://mailchimp.com/resources/what-is-backlinking-and-why-is-it-important-for-seo/" target="_blank">Backlinking</a>
+					<IconInfo class="text-sagedark-9 w-5 h-5"/>
 				</div>
-				<canvas use:chartRender={data3} class="relative z-10"> </canvas>
-			</div>
-			<p class="text-xs text-sagedark-11">SEO</p>
-		</div>
-	</div>
-	<p class="mb-md font-medium">Metrics</p>
-	<div class="max-w-[500px] grid gap-md grid-cols-2">
-		<div class="flex space-x-sm bg-sagedark-3 p-md rounded-md">
-			<div class="w-3 h-3 rounded-full bg-tealdark-9 mt-xs"></div>
-			<div>
-				<p class="mb-sm">First Contentful Paint</p>
-				<p class="text-2xl text-tealdark-9 font-medium">0.7s</p>
-			</div>
-		</div>
-		<div class="flex space-x-sm bg-sagedark-3 p-md rounded-md">
-			<div class="w-3 h-3 rounded-full bg-tealdark-9 mt-xs"></div>
-			<div>
-				<p class="mb-sm">Largest Contentful Paint</p>
-				<p class="text-2xl text-tealdark-9 font-medium">3.1s</p>
-			</div>
-		</div>
-		<div class="flex space-x-sm bg-sagedark-3 p-md rounded-md">
-			<div class="w-3 h-3 rounded-full bg-tealdark-9 mt-xs"></div>
-			<div>
-				<p class="mb-sm">Total Blocking Time</p>
-				<p class="text-2xl text-tealdark-9 font-medium">0ms</p>
-			</div>
-		</div>
-		<div class="flex space-x-sm bg-sagedark-3 p-md rounded-md">
-			<div class="w-3 h-3 rounded-full bg-tealdark-9 mt-xs"></div>
-			<div>
-				<p class="mb-sm">Speed Index</p>
-				<p class="text-2xl text-tealdark-9 font-medium">0.7s</p>
 			</div>
 		</div>
 	</div>
-	
 </Dashboard>

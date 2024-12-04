@@ -23,7 +23,7 @@
 	};
 </script>
 
-<Dashboard title="Analytics">
+<Dashboard title="Analytics" subtitle="Last Updated 12/4/2024" showSafeEditMode={false}>
 	<p class="mb-md font-medium">Performance</p>
 	<canvas use:chartRender={data1} class="relative z-10"> </canvas>
 </Dashboard>
