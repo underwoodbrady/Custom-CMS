@@ -198,7 +198,7 @@
 		<canvas use:chartRender={config} class="relative z-10"> </canvas>
 	</div>
 	<div class="bg-sagedark-4 w-full rounded-b-md flex">
-		<div class="relative flex-1 bg-cyandark-9 p-md max-w-52 rounded-bl-md">
+		<div class="relative flex-1 bg-cyandark-9 hover:bg-cyandark-10 transition-colors duration-100 p-md max-w-52 rounded-bl-md">
 			<div>
 				<h4 class="mb-sm">Total Clicks</h4>
 				<p class="text-3xl font-medium">37</p>
@@ -216,7 +216,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="relative flex-1 bg-purpledark-9 p-md max-w-52">
+		<div class="relative flex-1 bg-purpledark-9 hover:bg-purpledark-10 transition-colors duration-100 p-md max-w-52">
 			<div>
 				<h4 class="mb-sm">Position</h4>
 				<p class="text-3xl font-medium">49.5</p>
@@ -234,7 +234,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="relative flex-1 bg-tealdark-9 p-md max-w-52">
+		<div class="relative flex-1 bg-tealdark-9 hover:bg-tealdark-10 transition-colors duration-100 p-md max-w-52">
 			<div>
 				<h4 class="mb-sm">Total Impressions</h4>
 				<p class="text-3xl font-medium">1.72k</p>

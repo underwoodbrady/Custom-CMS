@@ -85,7 +85,7 @@
 	}
 </script>
 
-<aside class="fixed left-0 top-0 h-screen w-56 bg-sagedark-3 pt-xl flex flex-col justify-between">
+<aside class="fixed left-0 top-0 h-screen w-56 bg-sagedark-3 pt-xl flex flex-col justify-between drop-shadow-sm">
 	{#if activeItemHeight && activeItemTop}
 		<div
 			class="absolute z-20 top-0 right-0 w-xs bg-teal-9 transition-all duration-300 ease-in-out rounded-r-md indicator"
